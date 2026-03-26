@@ -1,0 +1,15 @@
+# 1. IGNORE THE BIG NODE_MODULES FOLDER
+# This stops thousands of files from uploading
+node_modules/
+
+# 2. IGNORE .NET BUILD FILES
+# These are generated automatically when you run the app
+bin/
+obj/
+
+# 3. IGNORE VS CODE SETTINGS (Optional)
+# Usually you don't need to share editor settings
+.vscode/
+
+# 4. IGNORE LOGS
+*.log
