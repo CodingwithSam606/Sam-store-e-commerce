@@ -74,6 +74,7 @@ app.MapDelete("/cart/{id}", (int id) =>
     // 2. Find the first item with the matching ID (using lowercase 'id' to match record)
     var itemToRemove = list.FirstOrDefault(i => i.id == id);
 
+
     // 3. Remove that specific item
     if (itemToRemove != null)
     {
