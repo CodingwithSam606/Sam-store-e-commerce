@@ -17,8 +17,8 @@ SamStore is a full-stack e-commerce web application built with React and .NET Co
     Contact Page: Simple contact form for user inquiries.
     Responsive Design: Fully responsive layout using CSS Grid and Flexbox.
 
-    🛠️ Tech Stack
-
+    
+🛠️ Tech Stack
 Frontend:
 
     React.js
@@ -39,9 +39,7 @@ Before running this project, make sure you have the following installed:
     Node.js (v14 or higher) - Download Here
     .NET SDK (v6.0 or higher) - Download Here
 
-    🏃 How to Run the Project
-
-
+🏃 How to Run the Project
 Follow these steps to get the application running on your local machine.
 1. Clone the Repository
 
