@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import CartSidebar from "./components/CartSidebar";
 import Checkout from "./pages/Checkout";
 import Contact from "./pages/Contact";
-// CHANGE 1: Import clearCartAPI here
+
 import { getCart, addToCartAPI, removeFromCartAPI, clearCartAPI } from "./services/api";
 
 function App() {
@@ -24,33 +24,27 @@ function App() {
         setCart(data);
     };
 
-    function addToCart(product) {
+    const addToCart = (product) => {
         addToCartAPI(product).then(() => {
             fetchCart();
-            setMessage("Product added to cart successfully!");
-            setTimeout(() => setMessage(""), 2000);
+            setMessage("✅ Product added to cart successfully!");
+            setTimeout(() => setMessage(""), 2500);
         });
-    }
+    };
 
-    function removeFromCart(id) {
+    const removeFromCart = (id) => {
         removeFromCartAPI(id).then(() => {
             fetchCart();
         });
-    }
-
-    // CHANGE 2: Add this new function to clear the cart
-    const clearCart = async () => {
-        await clearCartAPI();
-        setCart([]); // Clear the local state
     };
 
-    function openCart() {
-        setCartOpen(true);
-    }
+    const clearCart = async () => {
+        await clearCartAPI();
+        setCart([]);
+    };
 
-    function closeCart() {
-        setCartOpen(false);
-    }
+    const openCart = () => setCartOpen(true);
+    const closeCart = () => setCartOpen(false);
 
     return (
         <>
@@ -63,7 +57,6 @@ function App() {
 
             <Routes>
                 <Route path="/" element={<Home addToCart={addToCart} search={search} />} />
-                {/* CHANGE 3: Pass clearCart to Checkout */}
                 <Route path="/checkout" element={<Checkout clearCart={clearCart} />} />
                 <Route path="/contact" element={<Contact />} />
             </Routes>
@@ -76,7 +69,13 @@ function App() {
                 closeCart={closeCart}
                 removeFromCart={removeFromCart}
             />
-            {message && <div className="message">{message}</div>}
+
+            {/* Modern Toast Message */}
+            {message && (
+                <div className="fixed bottom-6 left-1/2 -translate-x-1/2 bg-black text-white px-6 py-3.5 rounded-2xl shadow-xl flex items-center gap-3 z-50">
+                    {message}
+                </div>
+            )}
         </>
     );
 }

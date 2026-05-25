@@ -48,7 +48,7 @@ var products = new List<Product>
 };
 
 // --- CART STORAGE (In Memory) ---
-ConcurrentBag<CartItem> cartItems = new ConcurrentBag<CartItem>();
+var cartItems = new ConcurrentBag<CartItem>();
 
 // --- ENDPOINTS ---
 
@@ -65,28 +65,22 @@ app.MapPost("/cart", (CartItem item) =>
     return Results.Ok(cartItems.ToList());
 });
 
-// 4. Remove SINGLE Item from Cart
+// 4. Remove from Cart
 app.MapDelete("/cart/{id}", (int id) => 
 {
-    // 1. Convert to list
     var list = cartItems.ToList();
-    
-    // 2. Find the first item with the matching ID (using lowercase 'id' to match record)
     var itemToRemove = list.FirstOrDefault(i => i.id == id);
 
-
-    // 3. Remove that specific item
     if (itemToRemove != null)
     {
         list.Remove(itemToRemove);
+        cartItems = new ConcurrentBag<CartItem>(list);
     }
-
-    // 4. Update the cart
-    cartItems = new ConcurrentBag<CartItem>(list);
 
     return Results.Ok(cartItems.ToList());
 });
 
+// Clear Cart
 app.MapDelete("/clear-cart", () => 
 {
     cartItems = new ConcurrentBag<CartItem>();
