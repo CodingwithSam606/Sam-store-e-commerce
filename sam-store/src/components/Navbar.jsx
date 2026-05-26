@@ -9,16 +9,17 @@ export default function Navbar({ cartCount, search, setSearch, openCart }) {
         <nav className="bg-white border-b sticky top-0 z-50 shadow-sm">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5">
                 <div className="flex items-center justify-between">
+
                     <Link to="/" className="text-2xl sm:text-3xl font-bold tracking-tight">SamStore</Link>
 
-                    {/* Desktop Links */}
+                    {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center gap-8 text-base font-medium">
                         <Link to="/#hero" className="hover:text-black transition-colors">Home</Link>
                         <Link to="/#products" className="hover:text-black transition-colors">Shop</Link>
                         <Link to="/contact" className="hover:text-black transition-colors">Contact</Link>
                     </div>
 
-                    {/* Search */}
+                    {/* Search Bar - Visible on tablets and laptops */}
                     <div className="hidden sm:flex flex-1 max-w-md mx-6">
                         <input
                             type="text"
@@ -30,7 +31,10 @@ export default function Navbar({ cartCount, search, setSearch, openCart }) {
                     </div>
 
                     <div className="flex items-center gap-4">
-                        <button onClick={openCart} className="relative p-2 hover:bg-gray-100 rounded-xl transition-colors">
+                        <button
+                            onClick={openCart}
+                            className="relative p-2 hover:bg-gray-100 rounded-xl transition-colors"
+                        >
                             <ShoppingCart size={24} />
                             {cartCount > 0 && (
                                 <span className="absolute -top-1 -right-1 bg-black text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">
@@ -39,7 +43,10 @@ export default function Navbar({ cartCount, search, setSearch, openCart }) {
                             )}
                         </button>
 
-                        <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden p-2">
+                        <button
+                            onClick={() => setMenuOpen(!menuOpen)}
+                            className="md:hidden p-2"
+                        >
                             <Menu size={26} />
                         </button>
                     </div>
