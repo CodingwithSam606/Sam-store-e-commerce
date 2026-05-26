@@ -50,8 +50,8 @@ export default function ProductGrid({ addToCart, search }) {
                         key={cat}
                         onClick={() => setCategory(cat)}
                         className={`px-6 py-2.5 rounded-2xl font-medium transition-all ${category === cat
-                                ? 'bg-black text-white shadow-md'
-                                : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
+                            ? 'bg-black text-white shadow-md'
+                            : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
                             }`}
                     >
                         {getCategoryName(cat)}
@@ -60,7 +60,7 @@ export default function ProductGrid({ addToCart, search }) {
             </div>
 
             {/* Product Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
                 {filteredProducts.map((product) => (
                     <ProductCard
                         key={product.id}
