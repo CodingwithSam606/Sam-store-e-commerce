@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // Make sure this matches your .NET port exactly
-const BASE_URL = "https://samstore-api-3x62.onrender.com/products";
+const BASE_URL = "https://samstore-api-3x62.onrender.com";
 
 export const getProducts = async () => {
     try {
