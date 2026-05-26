@@ -29,7 +29,8 @@ A modern, fully functional e-commerce web application built with **React.js** an
 - In-memory data storage (can be upgraded to SQL Server)
 
 ## 📸 Screenshots
-<img width="1366" height="768" alt="Screenshot (265)" src="https://github.com/user-attachments/assets/369c8380-0508-4656-b417-4b514bbf5b30" />
+<img width="1347" height="677" alt="Screenshot (265)" src="https://github.com/user-attachments/assets/0d8b97ba-41cc-43b8-8a0c-66abaa9b5e04" />
+
 <img width="1336" height="674" alt="Screenshot (263)" src="https://github.com/user-attachments/assets/00ad1c05-b064-495a-84d5-9cb22cedb79e" />
 
 ## 🧠 What I Learned
