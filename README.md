@@ -2,8 +2,6 @@
 
 A modern, fully functional e-commerce web application built with **React.js** and **.NET C#**.
 
-![SamStore Preview](https://sam-store-e-commerce.vercel.app/og-image.jpg) <!-- Add a nice screenshot later -->
-
 ## 🚀 Live Demo
 [View Live Project](https://sam-store-e-commerce.vercel.app/)
 
