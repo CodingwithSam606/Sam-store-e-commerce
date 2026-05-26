@@ -1,21 +1,60 @@
-# SamStore - Full-Stack E-commerce Platform
+# SamStore - Full Stack E-commerce Platform
 
-A modern, responsive e-commerce web application built with **React.js** (Frontend) and **.NET C#** (Backend).
+A modern, fully functional e-commerce web application built with **React.js** and **.NET C#**.
 
-### Features
-- Product browsing with search & category filters
+![SamStore Preview](https://sam-store-e-commerce.vercel.app/og-image.jpg) <!-- Add a nice screenshot later -->
+
+## 🚀 Live Demo
+[View Live Project](https://sam-store-e-commerce.vercel.app/)
+
+## ✨ Features
+
+- Responsive product browsing with search and category filters
+- Smooth slide-in shopping cart
+- Product Quick View modal
+- Full checkout flow
 - Add to cart with real-time updates
-- Smooth slide-in cart sidebar
-- Product quick view modal
-- Checkout page with order summary
-- Fully responsive design (Mobile + Desktop)
+- Clean and modern UI with Tailwind CSS
+- Fully responsive (Mobile + Desktop)
 
-### Tech Stack
-- **Frontend**: React.js, Tailwind CSS, React Router
-- **Backend**: .NET 8 Web API, C#
-- **State Management**: useState + Axios
-- **Deployment**: Frontend on Vercel/Netlify | Backend on localhost
+## 🛠️ Tech Stack
 
-### Screenshots
+**Frontend:**
+- React.js + Vite
+- Tailwind CSS
+- React Router DOM
+- Axios
+
+**Backend:**
+- .NET 8 Web API
+- C#
+- In-memory data storage (can be upgraded to SQL Server)
+
+## 📸 Screenshots
 <img width="1336" height="677" alt="Screenshot (262)" src="https://github.com/user-attachments/assets/dbd042dc-68dc-4f7c-aba7-3032e11cc7a4" />
 <img width="1336" height="674" alt="Screenshot (263)" src="https://github.com/user-attachments/assets/00ad1c05-b064-495a-84d5-9cb22cedb79e" />
+
+## 🧠 What I Learned
+
+- Building a full-stack application from scratch
+- State management and API integration
+- Responsive design principles
+- Clean component architecture in React
+- CORS configuration and backend-frontend communication
+
+## 📌 Future Improvements
+
+- User authentication (Login/Register)
+- Payment integration (Paystack)
+- Order history
+- Admin dashboard
+- Database (PostgreSQL / SQL Server)
+
+---
+
+**Built by Samuel Asalu**  
+Passionate Frontend & Full-Stack Developer  
+Open to internship and junior opportunities.
+
+Feel free to explore the code and live demo!
+
